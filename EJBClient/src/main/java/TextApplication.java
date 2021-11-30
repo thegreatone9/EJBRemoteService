@@ -5,6 +5,10 @@ import java.util.Properties;
 
 public class TextApplication {
 
+    /***
+     * Before running, make sure to add an application user to the Wildfly server,
+     * using the add-user.sh script in wildfly/bin
+     */
     public static void main(String[] args) throws NamingException {
         TextProcessorRemote textProcessor = EJBFactory.createTextProcessorBeanFromJNDI("java:");
         System.out.print(textProcessor.processText("sample text"));

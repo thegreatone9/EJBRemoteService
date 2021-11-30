@@ -1,1 +1,3 @@
-docker run -d -p 8080:8080 -p 9990:9990 wildfly-app 
+docker run -d -p 8080:8080 -p 9990:9990 wildfly-app
+
+Make sure to add application user to the Wildfly server using the add-user.sh script in wildfly/bin
