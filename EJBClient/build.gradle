@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.wildfly', name: 'wildfly-ejb-client-bom', version: '10.1.0.Final', ext: 'pom'
+    implementation 'jboss:jboss-client:4.0.2'
+    implementation 'javax.ejb:javax.ejb-api:3.2.2'
+    implementation group: 'org.jboss', name: 'jboss-remote-naming', version: '2.0.4.Final'
+    implementation group: 'org.jboss.xnio', name: 'xnio-nio', version: '3.5.0.Final'
+    implementation files('src/main/resources/EJBRemote.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
